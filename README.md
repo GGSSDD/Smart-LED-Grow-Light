@@ -62,13 +62,13 @@ wifi:
     password: <password>
 ```
 2. **Add more parameters to your yaml:**
-   - **Safe Mode** (you should add this as it will create a safe mode button which you can press before updating, making sure the OTA doesn't fail)
+- **Safe Mode** (you should add this as it will create a safe mode button which you can press before updating, making sure the OTA doesn't fail)
 ```
 button:
   - platform: safe_mode
     name: Safe Mode
 ```
-   - **Static IP**
+- **Static IP**
 ```
 wifi:
   ssid: !secret wifi_ssid
