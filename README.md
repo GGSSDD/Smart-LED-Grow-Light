@@ -14,8 +14,7 @@ DIY project to turn a regular LED grow light with a dumb controller to a smart o
 
 ## Preparations:
   1. Remove the dumb controller and strip the wires.
-  2. Solder the two transistors to the PCB prototype board (make sure to keep a fair distance between them.
-  3. Solder the two resistors for each transistor as shown in the pictures (then follow the steps as explained further below.
+  2. Solder the two transistors to the PCB prototype board (make sure to keep a fair distance between them), then follow the steps as explained further below.
 
 ## Wiring Instructions:
   1. **Lamp-red-wires(power) to PicoW-pin(VBUS).**
