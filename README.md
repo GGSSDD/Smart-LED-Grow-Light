@@ -28,4 +28,37 @@ DIY project to turn a regular LED grow light with a dumb controller to a smart o
   5. **#2-resistor(A) to #2-transistor-pin(1-base) to PicoW-pin(17-red)**
      - **Explanation:** Solder a resistor's end(A) to the #2 transistor's pin1, then solder a DuPont cable's end to both (remove one end and strip it), connecting the other end to the Pico's pin17 (for red).
   6. **From #1-resistor(B) to #1-transistor-pin(3-emitter) to #2-resistor(B) to #2-transistor-pin(3-emitter) to PicoW-pin(GND)**
+     - **Explanation:** You will need to connect the GND from one transistor to another and to the Pico's GND pin: Solder the #1 resistor's end(B) to #1 transistor's pin3, solder a DuPont cable's end to them (remove both end and strip them), then solder the other end to the #2 resistor's end(B) and the #2 transistor's pin3, and from there solder another DuPont cable (remove one end and strip it) and connect the other end to the Pico's GND pin.
+
+## Compile:
+  1. Go to ESPHome and add a new device. When adding a device you will start with a basic configuration. You will need to define all the parameters. The basic yaml should look like this:
+```
+esphome:
+  name: <device_name>
+  friendly_name: <friendly_name>
+
+rp2040:
+  board: rpipicow
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: <api_key>
+
+ota:
+  - platform: esphome
+    password: <password>
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot in case wifi connection fails
+  ap:
+    ssid: "<device_name> Fallback Hotspot"
+    password: <password>
+```
+
 
