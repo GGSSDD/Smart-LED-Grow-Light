@@ -17,7 +17,7 @@ DIY project to turn a regular LED grow light with a dumb controller to a smart o
 
 ## Wiring Instructions:
   1. Lamp-red-wires(power) to PicoW-pin(VBUS)
-  **- Explanation:** The red LED wires are connected to the collector pin of the second transistor. This configuration controls the current flow through the red LEDs.
+     **Explanation:** The red LED wires are connected to the collector pin of the second transistor. This configuration controls the current flow through the red LEDs.
   3. Lamp-white-wires(blue LEDs) to #1-transistor-pin(2-collector)
   4. Lamp-black-wires(red LEDs) to #2-transistor-pin(2-collector)
   5. #1-resistor(A) to #1-transistor-pin(1-base) to PicoW-pin(16-blue)
