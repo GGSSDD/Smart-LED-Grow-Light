@@ -19,10 +19,13 @@ DIY project to turn a regular LED grow light with a dumb controller to a smart o
 ## Wiring Instructions:
   1. **Lamp-red-wires(power) to PicoW-pin(VBUS).**
      - **Explanation:** Connect both the lamp's red wires to a DuPont female cable (remove one end and strip it), then connect the cable to the Pico's VBUS pin (no soldering).
-  3. **Lamp-white-wires(blue LEDs) to #1-transistor-pin(2-collector)**
+  2. **Lamp-white-wires(blue LEDs) to #1-transistor-pin(2-collector)**
      - **Explanation:** Connect both the lamp's white wires (in my case these wires give control over the blue LEDs) to a DuPont cable (remove both ends and strip them), then solder the cable to #1 transistor's pin2.
-  5. **Lamp-black-wires(red LEDs) to #2-transistor-pin(2-collector)**
-  6. **#1-resistor(A) to #1-transistor-pin(1-base) to PicoW-pin(16-blue)**
-  7. **#2-resistor(A) to #2-transistor-pin(1-base) to PicoW-pin(17-red)**
-  8. **From #1-resistor(B) to #1-transistor-pin(3-emitter) to #2-resistor(B) to #2-transistor-pin(3-emitter) to PicoW-pin(GND)**
+  3. **Lamp-black-wires(red LEDs) to #2-transistor-pin(2-collector)**
+     - **Explanation:** Connect both the lamp's black wires (in my case these wires give control over the red LEDs) to a DuPont cable (remove both ends and strip them), then solder the cable to #2 transistor's pin2.
+  4. **#1-resistor(A) to #1-transistor-pin(1-base) to PicoW-pin(16-blue)**
+     - **Explanation:** Solder a resistor's end(A) to the #1 transistor's pin1, then solder a DuPont cable's end to both (remove one end and strip it), connecting the other end to the Pico's pin16 (for blue).
+  5. **#2-resistor(A) to #2-transistor-pin(1-base) to PicoW-pin(17-red)**
+     - **Explanation:** Solder a resistor's end(A) to the #2 transistor's pin1, then solder a DuPont cable's end to both (remove one end and strip it), connecting the other end to the Pico's pin17 (for red).
+  6. **From #1-resistor(B) to #1-transistor-pin(3-emitter) to #2-resistor(B) to #2-transistor-pin(3-emitter) to PicoW-pin(GND)**
 
