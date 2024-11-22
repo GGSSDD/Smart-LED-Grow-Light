@@ -100,7 +100,7 @@ output:
     pin: 17
 ```
 4. **Save and compile**
-- **Explanation:** The safest way to do it is with the manual install. Press "Install", choose "Manual Download" and follow the instructions (you will need to hold the BOOTSEL button while pluging the Pico into the usb port of your computer).
+**Note:** The safest way to do it is with the manual install. Press "Install", choose "Manual Download" and follow the instructions (you will need to hold the BOOTSEL button while pluging the Pico into the usb port of your computer).
   
 **Your plants will be happy now!**
 
