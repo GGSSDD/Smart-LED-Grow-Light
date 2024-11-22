@@ -31,7 +31,7 @@ DIY project to turn a regular LED grow light with a dumb controller to a smart o
      - **Explanation:** You will need to connect the GND from one transistor to another and to the Pico's GND pin: Solder the #1 resistor's end(B) to #1 transistor's pin3, solder a DuPont cable's end to them (remove both end and strip them), then solder the other end to the #2 resistor's end(B) and the #2 transistor's pin3, and from there solder another DuPont cable (remove one end and strip it) and connect the other end to the Pico's GND pin.
 
 ## Compile:
-  1. Go to ESPHome and add a new device. When adding a device you will start with a basic configuration. You will need to define all the parameters. The basic yaml should look like this:
+  1. **Go to ESPHome and add a new device. When adding a device you will start with a basic configuration. You will need to define all the parameters. The basic yaml should look like this:**
 ```
 esphome:
   name: <device_name>
@@ -51,6 +51,7 @@ api:
 ota:
   - platform: esphome
     password: <password>
+
 wifi:
   ssid: !secret wifi_ssid
   password: !secret wifi_password
@@ -60,5 +61,46 @@ wifi:
     ssid: "<device_name> Fallback Hotspot"
     password: <password>
 ```
+2. **Add more parameters to your yaml:**
+   - **Safe Mode** (you should add this as it will create a safe mode button which you can press before updating, making sure the OTA doesn't fail)
+```
+button:
+  - platform: safe_mode
+    name: Safe Mode
+```
+   - **Static IP**
+```
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  manual_ip:
+    # Set this to the IP of the ESP
+    static_ip: 192.xxx.x.xx
+    # Set this to the IP address of the router. Often ends with .1
+    gateway: 192.xxx.x.1
+    # The subnet of the network. 255.255.255.0 works for most home networks.
+    subnet: 255.255.255.0
+```
+3. **Finally you will need to add the following to the end your yaml to create light entities for Home Assistant:**
+```
+light:
+  - platform: monochromatic
+    name: <name_for_blue>
+    output: output_component1
+  - platform: monochromatic
+    name: <name_for_red>
+    output: output_component2
 
+output:
+  - platform: rp2040_pwm
+    id: output_component1
+    pin: 16
+  - platform: rp2040_pwm
+    id: output_component2
+    pin: 17
+```
+4. **Save and compile**
+   - **Explanation:** The safest way to do it is with the manual install. Press "Install", choose "Manual Download" and follow the instructions (you will need to hold the BOOTSEL button while pluging the Pico into the usb port of your computer).
+  
+**Your plants will be happy now!**
 
