@@ -31,7 +31,7 @@ DIY project to turn a regular LED grow light with a dumb controller to a smart o
      - **Explanation:** You will need to connect the GND from one transistor to another and to the Pico's GND pin: Solder the #1 resistor's end(B) to #1 transistor's pin3, solder a DuPont cable's end to them (remove both end and strip them), then solder the other end to the #2 resistor's end(B) and the #2 transistor's pin3, and from there solder another DuPont cable (remove one end and strip it) and connect the other end to the Pico's GND pin.
 
 ## Compile:
-  1. **Go to ESPHome and add a new device. When adding a device you will start with a basic configuration. You will need to define all the parameters. The basic yaml should look like this:**
+1. **Go to ESPHome and add a new device. When adding a device you will start with a basic configuration. You will need to define all the parameters. The basic yaml should look like this:**
 ```
 esphome:
   name: <device_name>
