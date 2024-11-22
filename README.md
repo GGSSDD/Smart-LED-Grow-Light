@@ -4,7 +4,7 @@ DIY project to turn a regular LED grow light with a dumb controller into a smart
 ## Requirements:
 - 2 head grow light, full spectrum red & blue, 5V USB lamp, 2 x 20 LEDs, 80W.
 - Micro-USB cable with data transfer (for both charging and compiling).
-- Any 5V 1A phone charger or 5V USB poer supply.
+- Any 5V 1A phone charger or 5V USB power supply.
 - Raspberry Pi PicoW.
 - 2x8 cm double-sided PCB prototype board.
 - Jumper wires (DuPont - female).
