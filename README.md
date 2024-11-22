@@ -2,7 +2,7 @@
 DIY project to turn a regular LED grow light with a dumb controller to a smart one with a Raspberry Pi PicoW which you can integrate to Home Assistant with ESPHome.
 
 ## Necessary components:
-  1. 2 head grow light, full spectrum red & blue, 5V USB lamp, 2 x 20 LEDs, 80W.
+  ##1. 2 head grow light, full spectrum red & blue, 5V USB lamp, 2 x 20 LEDs, 80W.
   2. Micro-USB cable with data transfer (for both charging and compiling).
   3. Any 5V 1A phone charger or 5V USB poer supply.
   4. Raspberry Pi PicoW.
@@ -12,10 +12,10 @@ DIY project to turn a regular LED grow light with a dumb controller to a smart o
   8. 2 x 1 kΩ ±5% Resistor (1 for red & 1 for blue).
   9. Printed case.
 
-# Preparing the lamp:
+## Preparing the lamp:
   1. Remove the dumb controller and strip the wires, then follow the steps as explained further below.
 
-# Wiring:
+## Wiring:
   1. Lamp-red-wires(power) to PicoW-pin(VBUS)
   2. Lamp-white-wires(blue LEDs) to #1-transistor-pin(2-collector)
   3. Lamp-black-wires(red LEDs) to #2-transistor-pin(2-collector)
